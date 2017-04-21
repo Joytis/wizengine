@@ -1,4 +1,6 @@
 # Add any directories, files, or patterns you don't want to be tracked by version control
+/[Ll]ib/
+/[Bb]in/
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
