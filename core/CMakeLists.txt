@@ -13,7 +13,6 @@ include_directories(
 )
 
 target_link_libraries(
-        ${SDL2_LIBRARIES}
-        -L${SDL2_IMAGE_LIBRARY_DIR} -lSDL2_image
+        ${SFML_LIBRARIES} 
         ${Boost_LIBRARIES}
    	)

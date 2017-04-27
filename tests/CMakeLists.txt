@@ -16,10 +16,8 @@ include_directories(
 
 # Linking
 #==========================================================================
-
 target_link_libraries(eng_tests
-        wizengine
-        ${SDL2_LIBRARIES}
-        ${SDL2_IMAGE_LIBS}
-        ${Boost_LIBRARIES}
-        )
+    wizengine
+    ${SFML_LIBRARIES}
+    ${Boost_LIBRARIES}
+)
