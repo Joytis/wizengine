@@ -6,6 +6,9 @@
 // They don't look super pretty, but these macros are super helpful for
 //      printing useful debug messages!
 
+// TODO(clark): Restructure to use compilable assert statement
+// TODO(clark): Make check not throw exceptions. Remove exception handling
+// TODO(clark): Rewrite this now that I have a better understanding. <3
 
 #pragma once
 
@@ -29,6 +32,8 @@
 #else // OSX & Linux
 #define __FILENAME__ (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1: __FILE__)
 #endif
+
+#define debugBreak()
 
 // Checks is A is true, if not, log_err's the message and throws exception E
 #define check(A, E, M, ...)                                                              \

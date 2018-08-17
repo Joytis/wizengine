@@ -5,5 +5,5 @@ class dummy {
 private:
 	int var;
 public:
-
-}
+	int coolfunc();
+};

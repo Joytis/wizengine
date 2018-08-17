@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.3)
 project(wizengine)
 
+# set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
+
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Os -Wall")
 
@@ -24,8 +26,7 @@ endif()
 # Source Includes
 #=======================================================================
 file(GLOB_RECURSE CORE_SOURCES ${PROJECT_SOURCE_DIR}/core/src/*.cpp)
-file(GLOB_RECURSE CORE_SOURCES ${PROJECT_SOURCE_DIR}/core/include/*.hpp)
-
+file(GLOB_RECURSE CORE_HEADERS ${PROJECT_SOURCE_DIR}/core/include/*.hpp)
 file(GLOB_RECURSE TEST_SOURCES ${PROJECT_SOURCE_DIR}/tests/src/*.cpp)
 
 
@@ -69,8 +70,7 @@ include_directories(
 )
 
 #
-# Add Subdirectories
-#======================================================================
-add_subdirectory(core)
-add_subdirectory(tests)
-
+# Includes
+#=====================================================================
+add_subdirectory(${PROJECT_SOURCE_DIR}/core)
+add_subdirectory(${PROJECT_SOURCE_DIR}/tests)
